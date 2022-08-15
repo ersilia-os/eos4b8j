@@ -1,1 +1,1 @@
-python $1/code/main.py $2 $3
+python $1/code/similarity_search.py $2 $3
