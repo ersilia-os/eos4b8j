@@ -11,7 +11,7 @@ db     = 'GDBChEMBL'
 nnc    = '100'
 
 
-data = {}
+data = []
 for input_smiles in Lines:
     input_smiles = input_smiles.strip() 
     url = 'https://gdb-chembl-simsearch.gdb.tools/search?smi=' + input_smiles +  '&fp=' + fp + '&db=' + db + '&nnc=' + nnc
@@ -31,7 +31,7 @@ for input_smiles in Lines:
         smiles_list.append(x2.strip(' ')) 
         similarity_indices.append(float(x[3].strip('\"')))
     
-    data[input_smiles] = [smiles_list, similarity_indices]
+    data+= [[smiles_list, similarity_indices]]
 
 import json
 with open(sys.argv[2], 'w') as f:
