@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import sys
+import json
 
 # Input Parameters
 
@@ -33,6 +34,5 @@ for input_smiles in Lines:
     
     data+= [[smiles_list, similarity_indices]]
 
-import json
 with open(sys.argv[2], 'w') as f:
     json.dump(data, f)
