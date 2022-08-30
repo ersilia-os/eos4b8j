@@ -9,20 +9,19 @@ Look for 100 nearest neighbors, according to ECFP4 Tanimoto similarity, in the e
 - Input: SMILES
 - Output: Compound (SMILES)
 - Model type: 
-- Training set: (number of compounds and link to the training data)
+- Training set: 
 - Mode of training: Online
 
 # Source code
-Cite the source publication.
-- Code: include link to the source code
+- Code: The model uses the web application available at https://gdb-chembl-simsearch.gdb.tools/
 - Checkpoints: include the link to the checkpoints used if model is a pretrained model
 
 # License
-State the licences used which are GPL v3 license used by Ersilia and the license used by the source code, if any exists. Use [this guide]() on how to license new models to be incorporated into Ersilia's model hub 
+The GPL-v3 license applies to all parts of the repository.
 
 # History 
-- State the date when the model was downloaded and incorporated into Ersilia.
-- List any essential steps/modifications to the original code
+- We have developed a python script that accesses the web server available https://gdb-chembl-simsearch.gdb.tools/ to run the predictions.
+- 'requests' and 'BeautifulSoup' Python libraries are used to post the input to the server and fetch the results. 
 - Model was incorporated to Ersilia on 8/15/2022
 
 # About us
