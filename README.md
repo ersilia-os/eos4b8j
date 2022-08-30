@@ -14,7 +14,7 @@ Look for 100 nearest neighbors, according to ECFP4 Tanimoto similarity, in the e
 
 # Source code
 - Code: The model uses the web application available at https://gdb-chembl-simsearch.gdb.tools/
-- Checkpoints: include the link to the checkpoints used if model is a pretrained model
+- Checkpoints: N/A
 
 # License
 The GPL-v3 license applies to all parts of the repository.
