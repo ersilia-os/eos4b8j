@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import sys
-import json
+import csv
 
 # Input Parameters
 
@@ -34,5 +34,10 @@ for input_smiles in Lines:
     
     data+= [[smiles_list, similarity_indices]]
 
-with open(sys.argv[2], 'w') as f:
-    json.dump(data, f)
+
+header = ["sim-{0}".format(i+1) for i in range(len(smiles_list))]
+with open(sys.argv[2], "w") as f:
+    writer = csv.writer(f)
+    writer.writerow(header)
+    for d in data:
+        writer.writerow(d[0])
