@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
+import urllib
 import sys
 import csv
 
@@ -15,8 +16,9 @@ nnc    = '100'
 data = []
 for input_smiles in Lines:
     input_smiles = input_smiles.strip() 
-    url = 'https://gdb-chembl-simsearch.gdb.tools/search?smi=' + input_smiles +  '&fp=' + fp + '&db=' + db + '&nnc=' + nnc
+    url_encoded_smiles = urllib.parse.quote(input_smiles)
 
+    url = 'https://gdb-chembl-simsearch.gdb.tools/search?smi=' + url_encoded_smiles +  '&fp=' + fp + '&db=' + db + '&nnc=' + nnc
     r = requests.get(url)
 
     soup = BeautifulSoup(r.text, features = 'html.parser')
