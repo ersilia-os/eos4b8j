@@ -50,7 +50,12 @@ _10 of 100 columns are shown_
 ### Resource Consumption
 - **Model Size (Mb):** `1`
 - **Environment Size (Mb):** `249`
+- **Image Size (Mb):** `222.27`
 
+**Computational Performance (seconds):**
+- 10 inputs: `41.61`
+- 100 inputs: `1118.8`
+- 10000 inputs: `-1`
 
 ### References
 - **Source Code**: [https://gdb-chembl-simsearch.gdb.tools/](https://gdb-chembl-simsearch.gdb.tools/)
