@@ -38,6 +38,8 @@
     "License": "None",
     "Contributor": "Amna-28",
     "Incorporation Date": "2022-08-15",
+    "Last Packaging Date": "2025-10-21",
+    "Release": "v1.0.0",
     "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4b8j.zip",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos4b8j",
     "Docker Architecture": [
@@ -46,10 +48,10 @@
     ],
     "Model Size": 1.0,
     "Environment Size": 329.0,
-    "Image Size": 222.27,
-    "Computational Performance 1": 41.61,
-    "Computational Performance 2": 138.17,
-    "Computational Performance 3": 1118.8,
+    "Image Size": 290.52,
+    "Computational Performance 1": 32.86,
+    "Computational Performance 2": 72.75,
+    "Computational Performance 3": 467.38,
     "Computational Performance 4": -1.0,
     "Computational Performance 5": -1.0,
     "Input Shape": "Single"
