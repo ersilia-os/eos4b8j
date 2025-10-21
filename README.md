@@ -2,8 +2,7 @@
 
 The model looks for 100 nearest neighbors of a given molecule, according to ECFP4 Tanimoto similarity, in the GDBChEMBL database. GDBChEMBL is a 10M molecule-sampling from GDB17, a database containing all the enumerated molecules of up to 17 atoms heavy atoms (166.4B molecules). GDBChEMBL compounds were selected using a ChEMBL-likeness score, with the objective of having a collection with higher synthetic accessibility and high bioactivity while maintaining continuous coverage of the GDB17 chemical space. The whole GDBChEMBL database is not downloaded with the model, by using it you post queries to an online server external to Ersilia.
 
-This model was incorporated on 2022-08-15.
-
+This model was incorporated on 2022-08-15.Last packaged on 2025-10-21.
 
 ## Information
 ### Identifiers
@@ -51,11 +50,11 @@ _10 of 100 columns are shown_
 ### Resource Consumption
 - **Model Size (Mb):** `1`
 - **Environment Size (Mb):** `329`
-- **Image Size (Mb):** `222.27`
+- **Image Size (Mb):** `290.52`
 
 **Computational Performance (seconds):**
-- 10 inputs: `41.61`
-- 100 inputs: `1118.8`
+- 10 inputs: `32.86`
+- 100 inputs: `467.38`
 - 10000 inputs: `-1`
 
 ### References
