@@ -1,7 +1,7 @@
 {
     "Identifier": "eos4b8j",
     "Slug": "gdbchembl-similarity",
-    "Status": "In maintenance",
+    "Status": "Ready",
     "Title": "GDBChEMBL similarity search",
     "Description": "The model identifies the 100 nearest neighbors of a molecule based on ECFP4 Tanimoto similarity within the GDBChEMBL database. GDBChEMBL is a 10M molecule subset of GDB17 (which contains 166.4B molecules up to 17 heavy atoms). Compounds were selected using a ChEMBL-likeness score to prioritize synthetic accessibility and bioactivity while maintaining broad chemical space coverage. Note: The database is not stored locally; using the model sends queries to an external server outside the Ersilia ecosystem.",
     "Deployment": [
