@@ -1,6 +1,6 @@
 # GDBChEMBL similarity search
 
-The model looks for 100 nearest neighbors of a given molecule, according to ECFP4 Tanimoto similarity, in the GDBChEMBL database. GDBChEMBL is a 10M molecule-sampling from GDB17, a database containing all the enumerated molecules of up to 17 atoms heavy atoms (166.4B molecules). GDBChEMBL compounds were selected using a ChEMBL-likeness score, with the objective of having a collection with higher synthetic accessibility and high bioactivity while maintaining continuous coverage of the GDB17 chemical space. The whole GDBChEMBL database is not downloaded with the model, by using it you post queries to an online server external to Ersilia.
+The model identifies the 100 nearest neighbors of a molecule based on ECFP4 Tanimoto similarity within the GDBChEMBL database. GDBChEMBL is a 10M molecule subset of GDB17 (which contains 166.4B molecules up to 17 heavy atoms). Compounds were selected using a ChEMBL-likeness score to prioritize synthetic accessibility and bioactivity while maintaining broad chemical space coverage. Note: The database is not stored locally; using the model sends queries to an external server outside the Ersilia ecosystem.
 
 This model was incorporated on 2022-08-15.Last packaged on 2025-10-21.
 
@@ -59,7 +59,7 @@ _10 of 100 columns are shown_
 
 ### References
 - **Source Code**: [https://gdb-chembl-simsearch.gdb.tools/](https://gdb-chembl-simsearch.gdb.tools/)
-- **Publication**: [https://www.frontiersin.org/articles/10.3389/fchem.2020.00046/full](https://www.frontiersin.org/articles/10.3389/fchem.2020.00046/full)
+- **Publication**: [https://doi.org/10.3389/fchem.2020.00046](https://doi.org/10.3389/fchem.2020.00046)
 - **Publication Type:** `Peer reviewed`
 - **Publication Year:** `2020`
 - **Ersilia Contributor:** [Amna-28](https://github.com/Amna-28)
