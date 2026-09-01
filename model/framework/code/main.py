@@ -19,10 +19,17 @@ for input_smiles in Lines:
     url_encoded_smiles = urllib.parse.quote(input_smiles)
 
     url = 'https://gdb-chembl-simsearch.gdb.tools/search?smi=' + url_encoded_smiles +  '&fp=' + fp + '&db=' + db + '&nnc=' + nnc
-    r = requests.get(url)
+    r = requests.get(url, timeout = 60)
+
+    if r.status_code != 200:
+        data += [[[], []]]
+        continue
 
     soup = BeautifulSoup(r.text, features = 'html.parser')
     results = soup.find_all('script')
+    if not results:
+        data += [[[], []]]
+        continue
     T = str(results[-1]).splitlines()
     T = [i for i in T if not ('IDX' not in i)]
     smiles_list = []
@@ -40,9 +47,11 @@ for input_smiles in Lines:
     data += [[sorted_smiles_list, sorted_similarity_indices]]
 
 
-header = [f"smi_{i:02}" for i in range(len(smiles_list))]
+n_cols = int(nnc)
+header = [f"smi_{i:02}" for i in range(n_cols)]
 with open(sys.argv[2], "w") as f:
     writer = csv.writer(f)
     writer.writerow(header)
     for d in data:
-        writer.writerow(d[0])
+        row = d[0][:n_cols]
+        writer.writerow(row + [""] * (n_cols - len(row)))
