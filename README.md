@@ -1,6 +1,6 @@
 # GDBChEMBL similarity search
 
-Searches GDBChEMBL for the 100 closest analogues of a query molecule using ECFP4 Tanimoto similarity. GDBChEMBL is a ten-million-molecule slice of the enumerated GDB17 space, selected by Buhlmann and Reymond using a ChEMBL-likeness score so that the retained structures resemble compounds chemists actually make. Neighbours are consequently hypothetical but synthetically plausible molecules, most of which have never been synthesised, which makes the search useful for idea generation rather than sourcing.
+Searches GDBChEMBL for the 100 closest analogues of a query molecule using ECFP4 Tanimoto similarity. GDBChEMBL is a ten-million-molecule slice of GDB17, the enumeration of 166 billion small organic structures, drawn by Buhlmann and Reymond with a ChEMBL-likeness score so the retained molecules resemble what chemists actually make. Neighbours are hypothetical but synthetically plausible, useful for idea generation rather than sourcing. The library is not bundled, so every query travels to an external Reymond group server.
 
 This model was incorporated on 2022-08-15.Last packaged on 2026-09-01.
 
@@ -23,7 +23,7 @@ This model was incorporated on 2022-08-15.Last packaged on 2026-09-01.
 ### Output
 - **Output Dimension:** `100`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** List of the 100 nearest neighbours to the query molecule in the GDBChEMBL library.
+- **Interpretation:** The 100 closest analogues in GDBChEMBL, a ten-million-molecule virtual subset of the enumerated GDB17 space.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
