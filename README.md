@@ -2,7 +2,8 @@
 
 Searches GDBChEMBL for the 100 closest analogues of a query molecule using ECFP4 Tanimoto similarity. GDBChEMBL is a ten-million-molecule slice of GDB17, the enumeration of 166 billion small organic structures, drawn by Buhlmann and Reymond with a ChEMBL-likeness score so the retained molecules resemble what chemists actually make. Neighbours are hypothetical but synthetically plausible, useful for idea generation rather than sourcing. The library is not bundled, so every query travels to an external Reymond group server.
 
-This model was incorporated on 2022-08-15.Last packaged on 2026-09-01.
+This model was incorporated on 2022-08-15.
+Last packaged on 2026-09-01.
 
 ## Information
 ### Identifiers
@@ -46,6 +47,7 @@ _10 of 100 columns are shown_
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos4b8j](https://hub.docker.com/r/ersiliaos/eos4b8j)
 - **Docker Architecture:** `AMD64`, `ARM64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4b8j.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4b8j.zip)
+- **Apptainer**: [https://models-sif.s3.eu-north-1.amazonaws.com/eos4b8j_v2.sif](https://models-sif.s3.eu-north-1.amazonaws.com/eos4b8j_v2.sif)
 
 ### Resource Consumption
 - **Model Size (Mb):** `1`
